@@ -1,0 +1,53 @@
+name: Crowdin → ReadMe language branches
+
+# Runs when the Crowdin PR (translations/<lang>/docs/**) is merged into v1.0.
+# For each language it opens/updates a PR into v1.0-<lang>.
+on:
+  push:
+    branches: [v1.0]
+    paths: ['translations/**']
+  workflow_dispatch:
+    inputs:
+      langs:
+        description: 'Comma-separated Crowdin language codes (blank = all)'
+        required: false
+      dry_run:
+        description: 'Only report what would change'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: crowdin-to-readme
+  cancel-in-progress: false
+
+jobs:
+  distribute:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Work out which languages changed
+        id: langs
+        run: |
+          if [ -n "${{ inputs.langs }}" ]; then
+            echo "list=${{ inputs.langs }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event_name }}" = "push" ] && [ "${{ github.event.before }}" != "0000000000000000000000000000000000000000" ]; then
+            list=$(git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" -- translations/ \
+                   | cut -d/ -f2 | sort -u | paste -sd, -)
+            echo "list=$list" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Distribute translations
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          args=()
+          [ -n "${{ steps.langs.outputs.list }}" ] && args+=(--langs "${{ steps.langs.outputs.list }}")
+          [ "${{ inputs.dry_run }}" = "true" ] && args+=(--dry-run)
+          python3 scripts/distribute_translations.py "${args[@]}"

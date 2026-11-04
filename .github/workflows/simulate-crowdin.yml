@@ -1,0 +1,43 @@
+name: "POC: simulate Crowdin PR"
+
+# Stand-in for Crowdin's GitHub integration. Not part of what we ship to AppsFlyer.
+on:
+  workflow_dispatch:
+    inputs:
+      langs:
+        description: 'ReadMe language codes to "translate"'
+        default: 'ja,fr,es'
+      stamp:
+        description: 'Visible marker added to one page title'
+        default: 'Crowdin test'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  simulate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: v1.0
+          fetch-depth: 0
+      - name: Build translations/<lang>/docs like Crowdin does
+        run: python3 scripts/simulate_crowdin.py --langs "${{ inputs.langs }}" --stamp "${{ inputs.stamp }} ${{ github.run_number }}"
+      - name: Open Crowdin-style PR into v1.0
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          branch=l10n_crowdin_v1.0
+          git config user.name "crowdin-simulator[bot]"
+          git config user.email "crowdin-simulator@users.noreply.github.com"
+          git checkout -B "$branch"
+          git add translations
+          git diff --cached --quiet && { echo "No translation changes"; exit 0; }
+          git commit -m "New Crowdin translations (simulated, run ${{ github.run_number }})"
+          git push -f origin "$branch"
+          gh pr view "$branch" --json url -q .url 2>/dev/null || \
+            gh pr create --base v1.0 --head "$branch" \
+              --title "New Crowdin translations by GitHub Action" \
+              --body "Simulated Crowdin output for: ${{ inputs.langs }}"
