@@ -31,7 +31,7 @@ Some privacy regulations, such as GDPR or CCPA, give users a *right to erasure*.
 
 **Scenario:** A user requests that you delete data related to them. GDPR requires that this be done within 30 days.
 
-**Action required:** Use <Anchor target="_blank" href="/marketers/docs/send-opendsr-api-requests">OpenDSR API</Anchor> to send an erasure request.
+**Action required:** Use <Anchor target="_blank" href="/marketers/fr/docs/send-opendsr-api-requests">OpenDSR API</Anchor> to send an erasure request.
 
 ## Stop attributing installs to a media source
 
@@ -42,11 +42,11 @@ AppsFlyer collects install and event information for your configured media sourc
 **Action required to stop attributing installs to a media source:**
 
 * **SKAN (for iOS apps):**
-  1. <Anchor target="_blank" href="/marketers/docs/skan-conversion-studio#disable-skan-measurement">Disable SKAN measurement</Anchor>.
-  2. For <Anchor target="_blank" href="/marketers/docs/get-skan-postback-data-from-google-ads#turning-off-the-skan-integration">Google Ads</Anchor> and <Anchor target="_blank" href="/marketers/docs/skadnetwork-skan-interoperation-with-meta-ads#turning-off-the-skan-integration">Meta ads</Anchor>, you must also remove the SKAN connections to stop SKAN data recording.
-* **SRN:** <Anchor target="_blank" href="/marketers/docs/partner-activation-deactivation#deactivate-a-partner-integration">Deactivate the partner integration</Anchor>.
+  1. <Anchor target="_blank" href="/marketers/fr/docs/skan-conversion-studio#disable-skan-measurement">Disable SKAN measurement</Anchor>.
+  2. For <Anchor target="_blank" href="/marketers/fr/docs/get-skan-postback-data-from-google-ads#turning-off-the-skan-integration">Google Ads</Anchor> and <Anchor target="_blank" href="/marketers/fr/docs/skadnetwork-skan-interoperation-with-meta-ads#turning-off-the-skan-integration">Meta ads</Anchor>, you must also remove the SKAN connections to stop SKAN data recording.
+* **SRN:** <Anchor target="_blank" href="/marketers/fr/docs/partner-activation-deactivation#deactivate-a-partner-integration">Deactivate the partner integration</Anchor>.
 * **Non-SRNs:**  
-  1. <Anchor target="_blank" href="/marketers/docs/partner-activation-deactivation#deactivate-a-partner-integration">Deactivate the partner integration</Anchor>.
+  1. <Anchor target="_blank" href="/marketers/fr/docs/partner-activation-deactivation#deactivate-a-partner-integration">Deactivate the partner integration</Anchor>.
   2. Incoming clicks and installs from the AppsFlyer attribution link in your ads continue to be recorded and attributed. Make sure that ads displayed to leads no longer contain an AppsFlyer attribution link.
 * **Owned media:**
   * Discontinue using relevant OneLink custom links.
@@ -61,7 +61,7 @@ When an app is temporarily removed, data recording stops, the app doesn't show o
 
 > 📘 **Note**
 >
-> Removing an app is done individually. However, you can <Anchor target="_blank" href="/marketers/docs/adding-an-app-to-appsflyer#manage-your-apps-in-bulk-via-api">remove multiple apps via API</Anchor>.
+> Removing an app is done individually. However, you can <Anchor target="_blank" href="/marketers/fr/docs/adding-an-app-to-appsflyer#manage-your-apps-in-bulk-via-api">remove multiple apps via API</Anchor>.
 
 **To delete an app:**
 
@@ -76,7 +76,7 @@ When an app is temporarily removed, data recording stops, the app doesn't show o
 
 ## Transfer apps between accounts
 
-See this guide for details: <Anchor target="_blank" href="/marketers/docs/transferring-apps-between-accounts">Transferring apps between accounts</Anchor>.
+See this guide for details: <Anchor target="_blank" href="/marketers/fr/docs/transferring-apps-between-accounts">Transferring apps between accounts</Anchor>.
 
 ## Delete your account or downgrade your subscription plan
 

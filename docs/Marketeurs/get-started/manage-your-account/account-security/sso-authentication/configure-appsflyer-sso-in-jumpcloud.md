@@ -41,12 +41,12 @@ The first stage in configuring the AppsFlyer SSO process is done on the JumpClou
 4. [Optional] Add a description.
 5. Under the **SSO** tab:
    1. **Upload Metadata:** Download the <Anchor target="_blank" href="https://hq1.appsflyer.com/auth/sso-metadata">AppsFlyer SSO metadata</Anchor> as an XML file, then upload it here.
-   2. **ACS URLs:** Enter the callback URL according to the <Anchor target="_blank" href="/marketers/docs/set-up-sso-authentication-with-your-identity-provider-idp#single-signon-url-configuration">method for authenticating your users</Anchor>.
+   2. **ACS URLs:** Enter the callback URL according to the <Anchor target="_blank" href="/marketers/fr/docs/set-up-sso-authentication-with-your-identity-provider-idp#configurer-lurl-de-rappel">method for authenticating your users</Anchor>.
    3. **Login URL:** Enter the AppsFlyer <Anchor target="_blank" href="https://hq1.appsflyer.com/auth/login">login URL</Anchor>.  
 
       <Image alt="jumpcloud_sso_tab2__1_.png" src="https://files.readme.io/3b45c98d191a35644c5479a0237e92908ca6f18416f6df2b6e0c84a30940307b-15934671100561.png" width="477px" />
 6. Click **activate**.
-7. A public certificate is created. An indication of it appears on the top right of the page. Click **Download Certificate**. This certificate is needed in <Anchor target="_blank" href="/marketers/docs/set-up-sso-authentication-with-your-identity-provider-idp#step-2-complete-the-configuration-at-appsflyer">Step 2, on the AppsFlyer platform</Anchor>.
+7. A public certificate is created. An indication of it appears on the top right of the page. Click **Download Certificate**. This certificate is needed in <Anchor target="_blank" href="/marketers/fr/docs/set-up-sso-authentication-with-your-identity-provider-idp#step-2-complete-the-configuration-at-appsflyer">Step 2, on the AppsFlyer platform</Anchor>.
 
 </Accordion>
 
@@ -90,7 +90,7 @@ Create a group and assign users to it:
 
 <Accordion title="Complete the process in AppsFlyer">
 
-Now that you've configured the IdP part, go back to AppsFlyer to <Anchor target="_blank" href="/marketers/docs/set-up-sso-authentication-with-your-identity-provider-idp#step-2-complete-the-configuration-at-appsflyer">complete the configuration</Anchor>. You can then <Anchor target="_blank" href="/marketers/docs/set-up-sso-authentication-with-your-identity-provider-idp#step-3-test-the-sso-process">test</Anchor> to see that it works.
+Now that you've configured the IdP part, go back to AppsFlyer to <Anchor target="_blank" href="/marketers/fr/docs/set-up-sso-authentication-with-your-identity-provider-idp#step-2-complete-the-configuration-at-appsflyer">complete the configuration</Anchor>. You can then <Anchor target="_blank" href="/marketers/fr/docs/set-up-sso-authentication-with-your-identity-provider-idp#step-3-test-the-sso-process">test</Anchor> to see that it works.
 
 </Accordion>
 

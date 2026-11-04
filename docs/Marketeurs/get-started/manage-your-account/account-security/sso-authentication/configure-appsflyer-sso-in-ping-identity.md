@@ -66,7 +66,7 @@ The first step in configuring the AppsFlyer SSO process is done on the Ping Iden
         * Select **Enable Encryption**.
         * ALGORITHM: Select **AES\_256**.
       * **CERTIFICATE:**
-        * Select **Import** and upload the <Anchor target="_blank" href="/marketers/docs/set-up-sso-authentication-with-your-identity-provider-idp#obtaining-the-appsflyer-certificate-from-the-metadata-url">AppsFlyer encryption certificate</Anchor>. This certificate is signed by AppsFlyer and is used to both encrypt and sign the request.  
+        * Select **Import** and upload the <Anchor target="_blank" href="/marketers/fr/docs/set-up-sso-authentication-with-your-identity-provider-idp#obtaining-the-appsflyer-certificate-from-the-metadata-url">AppsFlyer encryption certificate</Anchor>. This certificate is signed by AppsFlyer and is used to both encrypt and sign the request.  
           **Note:** You can upload the AppsFlyer certificate signed by Amazon. Contact your CSM to obtain this certificate.
         * Select **Enforced Signed Authn Request**.
 6. Click **Save**.
@@ -133,7 +133,7 @@ Now that the Ping Identity SAML application is created, let’s create user grou
 
 <Accordion title="Complete the process in AppsFlyer">
 
-Now that you've configured the IdP part, go back to AppsFlyer to <Anchor target="_blank" href="/marketers/docs/set-up-sso-authentication-with-your-identity-provider-idp#step-2-complete-the-configuration-at-appsflyer">complete the configuration</Anchor>. You can then <Anchor target="_blank" href="/marketers/docs/set-up-sso-authentication-with-your-identity-provider-idp#step-3-test-the-sso-process">test</Anchor> to see that it works.
+Now that you've configured the IdP part, go back to AppsFlyer to <Anchor target="_blank" href="/marketers/fr/docs/set-up-sso-authentication-with-your-identity-provider-idp#step-2-complete-the-configuration-at-appsflyer">complete the configuration</Anchor>. You can then <Anchor target="_blank" href="/marketers/fr/docs/set-up-sso-authentication-with-your-identity-provider-idp#step-3-test-the-sso-process">test</Anchor> to see that it works.
 
 </Accordion>
 

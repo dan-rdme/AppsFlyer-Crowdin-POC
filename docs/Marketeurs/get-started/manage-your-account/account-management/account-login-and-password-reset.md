@@ -26,7 +26,7 @@ x-zendesk:
 
 Log in instructions for first-time and existing users. This includes a new account creation, a new user invitation, or how to log in as an existing user.
 
-**Note**: For instructions on how to create a user see <Anchor target="_blank" href="/marketers/docs/user-management#creating-users">here</Anchor>.
+**Note**: For instructions on how to create a user see <Anchor target="_blank" href="/marketers/fr/docs/user-management#creating-users">here</Anchor>.
 
 
 <div id="logging-in-for-the-first-time" />
@@ -40,7 +40,7 @@ To sign in to AppsFlyer:
 1. Open the AppsFlyer activation email
 2. **For the first user on an account**:
    1. Click the activation link in the email body  
-      **Note**: The user created when the account is opened is the "account owner" and is assigned the <Anchor target="_blank" href="/marketers/docs/user-management#account-owner">Admin role by default.</Anchor>
+      **Note**: The user created when the account is opened is the "account owner" and is assigned the <Anchor target="_blank" href="/marketers/fr/docs/user-management#propriétaire-de-compte">Admin role by default.</Anchor>
 3. **For users using an invite**:
    1. Copy the verification code in the email body
    2. Click the **AppsFlyer login page** button in the email body
@@ -60,9 +60,9 @@ Log in to AppsFlyer can be done using your:
 
 * Credentials (username and password)
 * Google login
-* <Anchor target="_blank" href="/marketers/docs/sso-authentication">Single Sign-on</Anchor>
+* <Anchor target="_blank" href="/marketers/fr/docs/sso-authentication">Single Sign-on</Anchor>
 
-**Note**: If your administrator configured a <Anchor target="_blank" href="/marketers/docs/implementing-and-using-2fa-login">two-factor authentication (2FA)</Anchor> for your account, you'll be asked to verify the login using another authentication method.
+**Note**: If your administrator configured a <Anchor target="_blank" href="/marketers/fr/docs/implementing-and-using-2fa-login">two-factor authentication (2FA)</Anchor> for your account, you'll be asked to verify the login using another authentication method.
 
 </Accordion>
 
@@ -105,7 +105,7 @@ When signing up to AppsFlyer, an email invitation was sent to your email. The ac
 
 1. Open the email
 2. Click the activation **AppsFlyer sign up page** button the email body  
-   **Note**: The user created at the time the account was opened, the "account owner", is assigned the <Anchor target="_blank" href="/marketers/docs/user-management#account-owner">Admin role by default.</Anchor>
+   **Note**: The user created at the time the account was opened, the "account owner", is assigned the <Anchor target="_blank" href="/marketers/fr/docs/user-management#propriétaire-de-compte">Admin role by default.</Anchor>
    1. If the link has expired, complete the sign up  from the beginning
 3. Create a password
 

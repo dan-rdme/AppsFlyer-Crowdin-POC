@@ -44,7 +44,7 @@ The first step in configuring the AppsFlyer SSO process is done on the Okta plat
 5. [Optional] **App logo**: Add a logo to appear near the app name.
 6. Click **Next**.
 7. Under **(2) Configure SAML Integration**, define the integration according to the following fields: ![okta-create-saml-integration.png](https://files.readme.io/6c276dd54afd30e828b989fc6796de5eca46282ade015e7a34e0bd1cc95d7fb8-16870970396177.png)
-   * **Single sign-on URL:** Enter the endpoint to which Okta sends the user verification. Use the link according to the <Anchor target="_blank" href="/marketers/docs/set-up-sso-authentication-with-your-identity-provider-idp#single-signon-url-configuration">callback URL configuration described here</Anchor>
+   * **Single sign-on URL:** Enter the endpoint to which Okta sends the user verification. Use the link according to the <Anchor target="_blank" href="/marketers/fr/docs/set-up-sso-authentication-with-your-identity-provider-idp#configurer-lurl-de-rappel">callback URL configuration described here</Anchor>
    * **Audience URI (SP Entity ID):** Enter this link: <Anchor target="_blank" href="https://hq1.appsflyer.com/">https://hq1.appsflyer.com</Anchor>
    * **Name ID format:** Select **EmailAddress** as the format for identifying the user
    * **Application username:** Select **Okta username**  
@@ -55,8 +55,8 @@ The first step in configuring the AppsFlyer SSO process is done on the Okta plat
 
    * **Assertion Encryption:** Select either **Encrypted** or **Unencrypted**.   
      **Note:** As assertions are controlled by your IdP, it's recommended to select **Encrypted**.
-   * **Encryption certificate:** Upload the <Anchor target="_blank" href="/marketers/docs/set-up-sso-authentication-with-your-identity-provider-idp#obtaining-the-appsflyer-certificate-from-the-metadata-url">AppsFlyer encryption certificate</Anchor>. This certificate is signed by AppsFlyer and is used to both encrypt and sign the request.
-   * [Optional] **Signature certificate:** Upload the <Anchor target="_blank" href="/marketers/docs/set-up-sso-authentication-with-your-identity-provider-idp#the-authentication-certificate">AppsFlyer signing certificate</Anchor>.
+   * **Encryption certificate:** Upload the <Anchor target="_blank" href="/marketers/fr/docs/set-up-sso-authentication-with-your-identity-provider-idp#obtaining-the-appsflyer-certificate-from-the-metadata-url">AppsFlyer encryption certificate</Anchor>. This certificate is signed by AppsFlyer and is used to both encrypt and sign the request.
+   * [Optional] **Signature certificate:** Upload the <Anchor target="_blank" href="/marketers/fr/docs/set-up-sso-authentication-with-your-identity-provider-idp#the-authentication-certificate">AppsFlyer signing certificate</Anchor>.
 9. Scroll to the end of the page, and click **Next**.
 10. Select **I’m an Okta customer adding an internal app**, and click **Finish**.
 
@@ -116,7 +116,7 @@ Now that the Okta SAML application has been created, let’s add users.
 
 <Accordion title="Complete the process in AppsFlyer">
 
-Now that you've configured the IdP part, go back to AppsFlyer to <Anchor target="_blank" href="/marketers/docs/set-up-sso-authentication-with-your-identity-provider-idp#step-2-complete-the-configuration-at-appsflyer">complete the configuration</Anchor>. You can then <Anchor target="_blank" href="/marketers/docs/set-up-sso-authentication-with-your-identity-provider-idp#step-3-test-the-sso-process">test</Anchor> to see that it works.
+Now that you've configured the IdP part, go back to AppsFlyer to <Anchor target="_blank" href="/marketers/fr/docs/set-up-sso-authentication-with-your-identity-provider-idp#step-2-complete-the-configuration-at-appsflyer">complete the configuration</Anchor>. You can then <Anchor target="_blank" href="/marketers/fr/docs/set-up-sso-authentication-with-your-identity-provider-idp#step-3-test-the-sso-process">test</Anchor> to see that it works.
 
 </Accordion>
 

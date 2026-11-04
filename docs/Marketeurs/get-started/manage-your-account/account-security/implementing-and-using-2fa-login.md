@@ -69,7 +69,7 @@ For accounts using 2FA, there may be occasions on which you need to reset a user
 3. On the **Users** tab, click the menu options <Image alt="actions_icon.png" src="https://files.readme.io/081e3baaa997a31ec2d420cdd05aa03973798a9e11238f418a5dc12f43fed373-19910370240913.png" width="25px" /> on the far-right side of the user’s row.
 4. Select **Reset 2FA** from the menu.
 
-**Note:** An admin can reset any other user's 2FA (including <Anchor target="_blank" href="/marketers/docs/user-management#admin">account owners</Anchor>) other than their own. In the case of no other admin users, to reset the account owner's 2FA, contact the AppsFlyer CS team.
+**Note:** An admin can reset any other user's 2FA (including <Anchor target="_blank" href="/marketers/fr/docs/user-management#admin">account owners</Anchor>) other than their own. In the case of no other admin users, to reset the account owner's 2FA, contact the AppsFlyer CS team.
 
 </Accordion>
 

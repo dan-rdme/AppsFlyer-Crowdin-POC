@@ -69,7 +69,7 @@ Create and manage up to **30 tokens** per type (API, S2S, OneLink) with **servic
 
 > 📘 **Note**
 >
-> For general information about standard tokens, see <Anchor target="_blank" href="/marketers/docs/managing-appsflyer-tokens">managing AppsFlyer tokens</Anchor>.
+> For general information about standard tokens, see <Anchor target="_blank" href="/marketers/fr/docs/managing-appsflyer-tokens">managing AppsFlyer tokens</Anchor>.
 
 #### How to access and control tokens
 
@@ -121,7 +121,7 @@ Enhancing the existing audit log capabilities, this feature introduces an API fo
 
 > 📘 **Note**
 >
-> For general information about the standard audit log, see <Anchor target="_blank" href="/marketers/docs/audit-log">Standard audit log</Anchor>.
+> For general information about the standard audit log, see <Anchor target="_blank" href="/marketers/fr/docs/audit-log">Standard audit log</Anchor>.
 
 ### **How to access the audit log via API**
 
@@ -165,9 +165,9 @@ To start using SCIM provisioning in AppsFlyer, you need to:
 
 To set up SSO, you need to:
 
-* <Anchor target="_blank" href="/marketers/docs/set-up-sso-authentication-with-your-identity-provider-idp#step-1-set-up-the-idp-platform">Set up the IdP platform</Anchor>
-* <Anchor target="_blank" href="/marketers/docs/set-up-sso-authentication-with-your-identity-provider-idp#step-2-set-up-appsflyer">Set up SSO in AppsFlyer</Anchor>
-* <Anchor target="_blank" href="/marketers/docs/set-up-sso-authentication-with-your-identity-provider-idp#step-3-test-the-sso-configuration">Test the SSO configuration</Anchor>
+* <Anchor target="_blank" href="/marketers/fr/docs/set-up-sso-authentication-with-your-identity-provider-idp#step-1-set-up-the-idp-platform">Set up the IdP platform</Anchor>
+* <Anchor target="_blank" href="/marketers/fr/docs/set-up-sso-authentication-with-your-identity-provider-idp#step-2-set-up-appsflyer">Set up SSO in AppsFlyer</Anchor>
+* <Anchor target="_blank" href="/marketers/fr/docs/set-up-sso-authentication-with-your-identity-provider-idp#step-3-test-the-sso-configuration">Test the SSO configuration</Anchor>
 
 #### Enable SCIM
 
@@ -195,7 +195,7 @@ In the SCIM connections, the following fields must be filled in:
 | --- | --- |
 | SCIM connector base URL (SCIM endpoint) | https://hq1.appsflyer.com/api/scim/v2 |
 | Unique identifier field for users | userName |
-| Authentication method: HTTP header called "Authorization" | Bearer &lt;<Anchor target="_blank" href="/marketers/docs/managing-appsflyer-tokens">Your AppsFlyer API token</Anchor>> |
+| Authentication method: HTTP header called "Authorization" | Bearer &lt;<Anchor target="_blank" href="/marketers/fr/docs/managing-appsflyer-tokens">Your AppsFlyer API token</Anchor>> |
 
 #### SCIM attributes
 
@@ -207,7 +207,7 @@ In the SCIM connections, the following fields must be filled in:
 
 #### Roles
 
-The roles must match the <Anchor target="_blank" href="/marketers/docs/user-management#roles-tab">AppsFlyer roles</Anchor>. The table below shows the current AppsFlyer roles and their values. Custom roles can be added. For JumpCloud, see the [limitations](/docs/enterprise-grade-security-package#limitations) below.
+The roles must match the <Anchor target="_blank" href="/marketers/fr/docs/user-management#roles-tab">AppsFlyer roles</Anchor>. The table below shows the current AppsFlyer roles and their values. Custom roles can be added. For JumpCloud, see the [limitations](/docs/enterprise-grade-security-package#limitations) below.
 
 | **Display name** | **Value** |
 | --- | --- |

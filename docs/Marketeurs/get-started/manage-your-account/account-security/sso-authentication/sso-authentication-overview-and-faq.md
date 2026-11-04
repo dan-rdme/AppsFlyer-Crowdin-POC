@@ -86,7 +86,7 @@ AppsFlyer will alert you via the platform when your AppsFlyer SSO certificate is
 
 <Accordion title="Force SSO login is disabled, how can I enable it?">
 
-Once the **Force SSO login** option is selected and the configuration is saved, this option becomes disabled. To revert and have **Force SSO login** enabled, you'll need to re-configure <Anchor target="_blank" href="/marketers/docs/set-up-sso-authentication-with-your-identity-provider-idp#step-2-complete-the-configuration-at-appsflyer">step 2</Anchor> of the SSO process from the beginning.
+Once the **Force SSO login** option is selected and the configuration is saved, this option becomes disabled. To revert and have **Force SSO login** enabled, you'll need to re-configure <Anchor target="_blank" href="/marketers/fr/docs/set-up-sso-authentication-with-your-identity-provider-idp#step-2-complete-the-configuration-at-appsflyer">step 2</Anchor> of the SSO process from the beginning.
 
 > 📘 **Note**
 >
@@ -106,7 +106,7 @@ Implementing the AppsFlyer certificate in your IdP is **strongly recommended** b
 
 <Accordion title="What happens when I deactivate SSO and how do I do it?">
 
-When deactivating SSO authentication, users will be able to log in using other methods, such as their AppsFlyer usernames and passwords and the <Anchor target="_blank" href="/marketers/docs/implementing-and-using-2fa-login">2FA</Anchor> method.
+When deactivating SSO authentication, users will be able to log in using other methods, such as their AppsFlyer usernames and passwords and the <Anchor target="_blank" href="/marketers/fr/docs/implementing-and-using-2fa-login">2FA</Anchor> method.
 
 1. From the top bar, open the account menu (admin email address dropdown) > **Security center**.
 2. Under **Enhanced login security**, select **Configure login method**.
