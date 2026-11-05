@@ -1,5 +1,5 @@
 ---
-title: POC new section
-excerpt: Added in English to test menu sync
+title: POC 新しいセクション
+excerpt: メニュー同期をテストするために英語で追加されました
 ---
-- [POC new page](/docs/poc-new-page)
+- [POC 新しいページ](/docs/poc-new-page)
