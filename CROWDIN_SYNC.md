@@ -11,21 +11,38 @@ This repo connects a Crowdin GitHub integration to ReadMe's language branches.
 
 1. English changes land on `v1.0`.
 2. Crowdin translates them and opens its PR into `v1.0` with `translations/<lang>/docs/...`.
-3. When that PR is merged, the **Crowdin → ReadMe language branches** workflow runs. For each language that changed, it:
-   - copies `translations/<lang>/docs/**` onto `v1.0-<lang>`
-   - renames the English category folder (`Marketers`) to the translated one
-   - rewrites cross-project links: `/marketers/docs/x` → `/marketers/<lang>/docs/x`, `/partners/docs/x` → `/partners/<lang>/docs/x`
-   - leaves every `_order.yaml` (navigation) untouched
-   - opens a PR into `v1.0-<lang>`, or updates the open one. It never pushes directly to a language branch.
-4. A reviewer merges the language PR. ReadMe syncs the branch and the language site updates.
+3. Whenever `translations/**` or English `docs/**` changes on `v1.0`, the **Crowdin → ReadMe language branches** workflow runs. English on `v1.0` decides **which pages exist**. For each language in `enabled_languages`, it:
+   - writes every translated page from `translations/<lang>/` into the translated category folder (`Marketers` → `マーケター`, ...)
+   - **new pages:** a page that is new in English and not yet translated gets an English copy (fallback) until the translation arrives
+   - **deleted or renamed pages:** a page that no longer exists in English is removed from the language branch. Leftover translation files for removed pages are ignored, so they are never recreated.
+   - **menus:** every `_order.yaml` is copied from English, so new sections and pages appear in the language menus. The root `docs/_order.yaml`, which holds the translated category name, is left alone.
+   - **links:** `/marketers/docs/x`, `/partners/docs/x`, `/…/reference/x` and `https://support.appsflyer.com/marketers/docs/x` become `/<project>/<lang>/…`, keeping anchors. Same-project (`/docs/x`) and external links are left alone.
+   - opens a PR into `v1.0-<lang>`, or updates the open one, with a summary of what changed. With `auto_merge` set, it also merges the PR.
+4. Someone merges the language PR, or it merges automatically. ReadMe syncs the branch and the language site updates.
 
 If nothing changed for a language, it is skipped. The workflow can be run again safely: running it twice opens no duplicate PRs.
+
+### Settings in `.github/crowdin-readme.json`
+
+| Key | Default | What it does |
+|---|---|---|
+| `enabled_languages` | all mapped | Which language branches to manage |
+| `english_fallback` | `true` | Add English copies of new, untranslated pages |
+| `mirror_deletions` | `true` | Remove pages deleted or renamed in English |
+| `sync_order_files` | `true` | Copy menus (`_order.yaml`) from English, except the root one |
+| `link_sections` | `["docs"]` | Path sections to localize (`docs`, `reference`, ...) |
+| `site_domains` | `[]` | Own domains whose absolute links should be localized |
+| `auto_merge` | `false` | Merge language PRs automatically. Uses GitHub auto-merge when required checks exist. |
+
+**Recommendation:** start with `auto_merge: false` and review the PRs for a few weeks, then switch it on. The Crowdin PR into `v1.0` is already the human review step.
+
+**Renamed pages** get a new URL. Add a redirect from the old URL in ReadMe so existing links and bookmarks keep working.
 
 ## Files
 
 | File | Purpose |
 |---|---|
-| `.github/workflows/crowdin-to-readme.yml` | The Action. Runs on push to `v1.0` that touches `translations/**`, or manually. |
+| `.github/workflows/crowdin-to-readme.yml` | The Action. Runs on push to `v1.0` that touches `translations/**` or `docs/**`, or manually. |
 | `scripts/distribute_translations.py` | The logic. Plain Python 3 with no dependencies; it can run locally with `--dry-run`. |
 | `.github/crowdin-readme.json` | Configuration: language code mapping, category names, which project slugs count as cross-project links. |
 | `.github/workflows/simulate-crowdin.yml`, `scripts/simulate_crowdin.py` | **POC only.** Stand-in for Crowdin. Do not copy these into production. |
